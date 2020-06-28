@@ -15,7 +15,7 @@ import csv
 #import numpy
 os.chdir(os.path.dirname(os.path.abspath(__file__)))           # set directory
 election_data = os.path.join("Resources","election_data.csv")  # associate input file
-election_sum = os.path.join("Analysis","election_summary.txt")            # associate output file
+election_sum = os.path.join("Analysis","election_summary.txt") # associate output file
 
 #################################
 ####  Define Data Variables  ####
