@@ -50,15 +50,15 @@ avg_chg = round(float(numpy.mean(monthly_change_list)),2)          # Calculate a
 ###################################################
 ####  Write output summary (pseudo-formatted)  ####
 ###################################################
-# with open(budget_sum,'w',newline='') as outfile:
-#     out_rec = csv.writer(outfile)
-#     out_rec.writerow(["             Financial Analysis"])
-#     out_rec.writerow(["-"*53])
-#     out_rec.writerow(["Total  number of Months     :  " + str(total_months)])
-#     out_rec.writerow(["Net Profit and Loss         : $ " + str(net_total)])
-#     out_rec.writerow(["Average change in Profits   : $    " + str(avg_chg)])
-#     out_rec.writerow(["Greatest Increase in Profits: $  " +  str(greatest_increase[1]) + "     " + greatest_increase[0]])
-#     out_rec.writerow(["Greatest decrease in Profits: $ " +  str(greatest_decrease[1]) + "     " + greatest_decrease[0]])
+with open(budget_sum,'w',newline='') as outfile:
+    out_rec = csv.writer(outfile)
+    out_rec.writerow(["             Financial Analysis"])
+    out_rec.writerow(["-"*53])
+    out_rec.writerow(["Total  number of Months     :  " + str(total_months)])
+    out_rec.writerow(["Net Profit and Loss         : $ " + str(net_total)])
+    out_rec.writerow(["Average change in Profits   : $    " + str(avg_chg)])
+    out_rec.writerow(["Greatest Increase in Profits: $  " +  str(greatest_increase[1]) + "     " + greatest_increase[0]])
+    out_rec.writerow(["Greatest decrease in Profits: $ " +  str(greatest_decrease[1]) + "     " + greatest_decrease[0]])
 
 ################################################################
 ####  Print above chart to screen (using fstring to format) ####
