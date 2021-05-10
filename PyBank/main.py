@@ -34,13 +34,13 @@ with open(budget_raw) as infile:
     for row in in_rec:
         total_months += 1
         net_total += int(row[1])
-        if int(row[1]) > greatest_increase[1]:           # find greatest increse and decrese
+        if (int(row[1]) - month_hold) > greatest_increase[1]:      # find greatest increse and decrese
             greatest_increase[0] = row[0]
-            greatest_increase[1] = int(row[1])
-        elif int(row[1]) < greatest_decrease[1]:
+            greatest_increase[1] = int(row[1]) - month_hold
+        elif (int(row[1]) - month_hold) < greatest_decrease[1]:
             greatest_decrease[0] = row[0]
-            greatest_decrease[1] = int(row[1])
-        if total_months == 1:                            # if first record, set month hold
+            greatest_decrease[1] = int(row[1]) - month_hold
+        if total_months == 1:                                       # if first record, set month hold
             month_hold = int(row[1])
         else:
             monthly_change_list.append(int(row[1]) - month_hold)   # accumulate list of monthly changes
@@ -50,15 +50,15 @@ avg_chg = round(float(numpy.mean(monthly_change_list)),2)          # Calculate a
 ###################################################
 ####  Write output summary (pseudo-formatted)  ####
 ###################################################
-with open(budget_sum,'w',newline='') as outfile:
-    out_rec = csv.writer(outfile)
-    out_rec.writerow(["             Financial Analysis"])
-    out_rec.writerow(["-"*53])
-    out_rec.writerow(["Total  number of Months     :  " + str(total_months)])
-    out_rec.writerow(["Net Profit and Loss         : $ " + str(net_total)])
-    out_rec.writerow(["Average change in Profits   : $    " + str(avg_chg)])
-    out_rec.writerow(["Greatest Increase in Profits: $  " +  str(greatest_increase[1]) + "     " + greatest_increase[0]])
-    out_rec.writerow(["Greatest decrease in Profits: $ " +  str(greatest_decrease[1]) + "     " + greatest_decrease[0]])
+# with open(budget_sum,'w',newline='') as outfile:
+#     out_rec = csv.writer(outfile)
+#     out_rec.writerow(["             Financial Analysis"])
+#     out_rec.writerow(["-"*53])
+#     out_rec.writerow(["Total  number of Months     :  " + str(total_months)])
+#     out_rec.writerow(["Net Profit and Loss         : $ " + str(net_total)])
+#     out_rec.writerow(["Average change in Profits   : $    " + str(avg_chg)])
+#     out_rec.writerow(["Greatest Increase in Profits: $  " +  str(greatest_increase[1]) + "     " + greatest_increase[0]])
+#     out_rec.writerow(["Greatest decrease in Profits: $ " +  str(greatest_decrease[1]) + "     " + greatest_decrease[0]])
 
 ################################################################
 ####  Print above chart to screen (using fstring to format) ####

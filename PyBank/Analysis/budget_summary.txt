@@ -3,5 +3,5 @@
 Total  number of Months     :  86
 Net Profit and Loss         : $ 38382578
 Average change in Profits   : $    -2315.12
-Greatest Increase in Profits: $  1170593     Feb-2012
+Greatest Increase in Profits: $  795914     Nov-2016
 Greatest decrease in Profits: $ -1196225     Sep-2013

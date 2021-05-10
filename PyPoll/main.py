@@ -14,8 +14,8 @@ import csv
 #import operator
 #import numpy
 os.chdir(os.path.dirname(os.path.abspath(__file__)))           # set directory
-election_data = os.path.join("Resources","election_data.csv")  # associate input file
-election_sum = os.path.join("Analysis","election_summary.txt") # associate output file
+election_data = os.path.join("Resources","election_test_data.csv")  # associate input file
+election_sum = os.path.join("Analysis","election_test_summary.txt") # associate output file
 
 #################################
 ####  Define Data Variables  ####
@@ -34,7 +34,7 @@ with open(election_data) as infile:
     for row in in_rec:
         if row[2] not in candidates: 
                 candidates.append(row[2])        # fill candidates list
-                votes.append(int(row[0]))        # initialize votes buckets
+                votes.append(int(row[0]))        # initialize length of votes buckets
 for x in range(len(votes)):                      # zero out buckets for votes
     votes[x] = 0
 
