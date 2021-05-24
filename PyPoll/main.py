@@ -1,11 +1,12 @@
-##################################################################################
-#  RUT-SOM-DATA-PT-06-2020-U-C                                      Douglas High #
-#   Python Challenge                                               June 27, 2020 #
-#      >PyPoll                                                                   #
-#   - Read input csv file and create list of candidates, then accumulate votes.  #
-#   - calculate candidates percentage of votes and winner.                       #
-#   - produce output to txt file and display to screen.                          #
-##################################################################################
+####################################################################################
+#  RUT-SOM-DATA-PT-06-2020-U-C                                        Douglas High #
+#   Python Challenge                                                 June 27, 2020 #
+#      >PyPoll                                                                     #
+#   - Read input csv file and create list of candidates, then accumulate votes.    #
+#   - calculate candidates percentage of votes and winner.                         #
+#   - produce output to txt file and display to screen.                            #
+#  *- 5/2021 - git repo and local folder name changed to PyBank, no code changes.  #
+####################################################################################
 #####################
 ####  I/O Setup  ####
 #####################

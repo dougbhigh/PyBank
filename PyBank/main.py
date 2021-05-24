@@ -1,10 +1,11 @@
-##################################################################################
-#  RUT-SOM-DATA-PT-06-2020-U-C                                      Douglas High #
-#   Python Challenge                                               June 27, 2020 #
-#      >PyBanker                                                                 #
-#   - Read input csv file, tally monthly P&L and average change                  #
-#   - produces output to txt file, summarizing data                              #
-##################################################################################
+####################################################################################
+#  RUT-SOM-DATA-PT-06-2020-U-C                                        Douglas High #
+#   Python Challenge                                                 June 27, 2020 #
+#      >PyBanker                                                                   #
+#   - Read input csv file, tally monthly P&L and average change                    #
+#   - produces output to txt file, summarizing data                                #
+#  *- 5/2021 - git repo and local folder name changed to PyBank, no code changes.  #
+####################################################################################
 #####################
 ####  I/O Setup  ####
 #####################
